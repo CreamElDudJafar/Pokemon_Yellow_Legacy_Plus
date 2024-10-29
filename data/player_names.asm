@@ -14,7 +14,7 @@ DefaultNamesGirl:
 
 DefaultNamesRival:
 	db   "NEW NAME"
-	next "BLUE"
 	next "GARY"
+	next "BLUE"
 	next "JOHN"
 	db   "@"

@@ -2331,8 +2331,11 @@ wPlayerGender::
 	; $00 = male
 	; $01 = female
 		ds 1
+
+wUniQuizAnswer::
+	ds 2
 	
-	ds 54 ; unused
+	ds 52 ; unused
 
 wObtainedHiddenItemsFlags:: flag_array 112
 

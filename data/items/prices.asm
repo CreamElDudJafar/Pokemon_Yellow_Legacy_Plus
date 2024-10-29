@@ -1,18 +1,18 @@
 ItemPrices::
 	table_width 3, ItemPrices
-	bcd3 0     ; MASTER_BALL
-	bcd3 1200  ; ULTRA_BALL
-	bcd3 600   ; GREAT_BALL
-	bcd3 200   ; POKE_BALL
+	bcd3 0001  ; MASTER_BALL
+	bcd3 1000  ; ULTRA_BALL
+	bcd3 500   ; GREAT_BALL
+	bcd3 100   ; POKE_BALL
 	bcd3 0     ; TOWN_MAP
 	bcd3 0     ; BICYCLE
 	bcd3 0     ; SURFBOARD
 	bcd3 1000  ; SAFARI_BALL
 	bcd3 0     ; POKEDEX
-	bcd3 0     ; MOON_STONE
+	bcd3 2100  ; MOON_STONE
 	bcd3 100   ; ANTIDOTE
-	bcd3 250   ; BURN_HEAL
-	bcd3 250   ; ICE_HEAL
+	bcd3 200   ; BURN_HEAL
+	bcd3 200   ; ICE_HEAL
 	bcd3 200   ; AWAKENING
 	bcd3 200   ; PARLYZ_HEAL
 	bcd3 3000  ; FULL_RESTORE
@@ -34,12 +34,12 @@ ItemPrices::
 	bcd3 2100  ; FIRE_STONE
 	bcd3 2100  ; THUNDER_STONE
 	bcd3 2100  ; WATER_STONE
-	bcd3 9800  ; HP_UP
-	bcd3 9800  ; PROTEIN
-	bcd3 9800  ; IRON
-	bcd3 9800  ; CARBOS
-	bcd3 9800  ; CALCIUM
-	bcd3 4800  ; RARE_CANDY
+	bcd3 5000  ; HP_UP
+	bcd3 5000  ; PROTEIN
+	bcd3 5000  ; IRON
+	bcd3 5000  ; CARBOS
+	bcd3 5000  ; CALCIUM
+	bcd3 0001  ; RARE_CANDY
 	bcd3 0     ; DOME_FOSSIL
 	bcd3 0     ; HELIX_FOSSIL
 	bcd3 0     ; SECRET_KEY
@@ -48,7 +48,7 @@ ItemPrices::
 	bcd3 5000  ; X_ACCURACY
 	bcd3 2100  ; LEAF_STONE
 	bcd3 0     ; CARD_KEY
-	bcd3 10000 ; NUGGET
+	bcd3 20000 ; NUGGET
 	bcd3 9800  ; ITEM_32
 	bcd3 1000  ; POKE_DOLL
 	bcd3 600   ; FULL_HEAL
@@ -60,8 +60,8 @@ ItemPrices::
 	bcd3 5000  ; DIRE_HIT
 	bcd3 10    ; COIN
 	bcd3 200   ; FRESH_WATER
-	bcd3 300   ; SODA_POP
-	bcd3 350   ; LEMONADE
+	bcd3 250   ; SODA_POP
+	bcd3 300   ; LEMONADE
 	bcd3 0     ; S_S_TICKET
 	bcd3 0     ; GOLD_TEETH
 	bcd3 4000   ; X_ATTACK
@@ -78,11 +78,11 @@ ItemPrices::
 	bcd3 0     ; OLD_ROD
 	bcd3 0     ; GOOD_ROD
 	bcd3 0     ; SUPER_ROD
-	bcd3 9800  ; PP_UP
-	bcd3 0     ; ETHER
-	bcd3 0     ; MAX_ETHER
-	bcd3 0     ; ELIXER
-	bcd3 0     ; MAX_ELIXER
+	bcd3 5000  ; PP_UP
+	bcd3 1500  ; ETHER
+	bcd3 2000  ; MAX_ETHER
+	bcd3 2000  ; ELIXER
+	bcd3 4000  ; MAX_ELIXER
 	assert_table_length NUM_ITEMS
 	bcd3 0     ; FLOOR_B2F
 	bcd3 0     ; FLOOR_B1F

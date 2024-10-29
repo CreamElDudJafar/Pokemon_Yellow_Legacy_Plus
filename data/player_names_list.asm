@@ -3,6 +3,7 @@ DefaultNamesPlayerList:
 	db "YELLOW@"
 	db "ASH@"
 	db "JACK@"
+        
 
 DefaultNamesGirlList:
 	db "NEW NAME@"
@@ -12,6 +13,7 @@ DefaultNamesGirlList:
 
 DefaultNamesRivalList:
 	db "NEW NAME@"
-	db "BLUE@"
 	db "GARY@"
+	db "BLUE@"
 	db "JOHN@"
+        

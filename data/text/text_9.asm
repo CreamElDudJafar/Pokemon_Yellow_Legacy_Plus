@@ -445,3 +445,8 @@ _UsedCutText::
 	text " hacked"
 	line "away with CUT!"
 	prompt
+
+_CantUsePCHere::
+	text "You cannot use"
+	line "this here!"
+	prompt

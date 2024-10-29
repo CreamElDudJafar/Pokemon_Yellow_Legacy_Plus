@@ -153,7 +153,7 @@ GainExperience:
 	ld d, 35 ; Vileplume's level
 	jr nc, .next1
 	cp 2
-    ld d, 24 ; Bit below Raichu's level
+        ld d, 29 ; Raichu's level
 	jr nc, .next1
 	cp 1
 	ld d, 21 ; Starmie's level

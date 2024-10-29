@@ -724,154 +724,188 @@ JugglerAI:
 	jp AISwitchIfEnoughMons
 
 BlackbeltAI:
-	cp 13 percent - 1
+	cp $ff
 	ret nc
-	jp AIUseXAttack
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 GiovanniAI:
-	and a
-	ret
-	; cp 25 percent + 1
-	; ret nc
-	; jp AIUseGuardSpec
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 CooltrainerMAI:
-	cp 25 percent + 1
-	ret nc ; 25% chance to switch
-	ld a, 10
-	call AICheckIfHPBelowFraction
-	jp c, AIUseHyperPotion
-	ld a, 1
+	cp $ff
+	ret nc
+	ld a,$3
 	call AICheckIfHPBelowFraction
 	ret nc
-	jp AISwitchIfEnoughMons
+	jp AIUseFullRestore
 
 CooltrainerFAI:
-	cp 25 percent + 1
-	ret nc ; 25% chance to switch
-	ld a, 10
-	call AICheckIfHPBelowFraction
-	jp c, AIUseHyperPotion
-	ld a, 1
+	cp $ff
+	ret nc
+	ld a,$3
 	call AICheckIfHPBelowFraction
 	ret nc
-	jp AISwitchIfEnoughMons
+	jp AIUseFullRestore
 
 BrockAI:
-	and a
-	ret
-; ; if his active monster has a status condition, use a full heal
-; 	ld a, [wEnemyMonStatus]
-; 	and a
-; 	ret z
-; 	jp AIUseFullHeal
-
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
+	
 MistyAI:
-	and a
-	ret
-	; cp 25 percent + 1
-	; ret nc
-	; jp AIUseXDefend
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 LtSurgeAI:
-	and a
-	ret
-	; cp 25 percent + 1
-	; ret nc
-	; jp AIUseXSpeed
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 ErikaAI:
-	and a
-	ret
-	; cp 50 percent + 1
-	; ret nc
-	; ld a, 10
-	; call AICheckIfHPBelowFraction
-	; ret nc
-	; jp AIUseSuperPotion
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 KogaAI:
-	and a
-	ret
-	; cp 13 percent - 1
-	; ret nc
-	; jp AIUseXAttack
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 BlaineAI:
-	and a
-	ret
-	; cp 25 percent + 1
-	; ret nc
-	; ld a, 10
-	; call AICheckIfHPBelowFraction
-	; ret nc
-	; jp AIUseSuperPotion
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 SabrinaAI:
-	and a
-	ret
-	; cp 25 percent + 1
-	; ret nc
-	; jp AIUseXDefend
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 Rival2AI:
-	and a
-	ret
-	; cp 13 percent - 1
-	; ret nc
-	; ld a, 5
-	; call AICheckIfHPBelowFraction
-	; ret nc
-	; jp AIUsePotion
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 Rival3AI:
-	and a
-	ret
-	; cp 13 percent - 1
-	; ret nc
-	; ld a, 5
-	; call AICheckIfHPBelowFraction
-	; ret nc
-	; jp AIUseFullRestore
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 LoreleiAI:
-	and a
-	ret
-	; cp 50 percent + 1
-	; ret nc
-	; ld a, 5
-	; call AICheckIfHPBelowFraction
-	; ret nc
-	; jp AIUseSuperPotion
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 BrunoAI:
-	and a
-	ret
-	; cp 25 percent + 1
-	; ret nc
-	; jp AIUseXDefend
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 AgathaAI:
-	and a
-	ret
-	; cp 8 percent
-	; jp c, AISwitchIfEnoughMons
-	; cp 50 percent + 1
-	; ret nc
-	; ld a, 4
-	; call AICheckIfHPBelowFraction
-	; ret nc
-	; jp AIUseSuperPotion
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 LanceAI:
-	and a
-	ret
-	; cp 50 percent + 1
-	; ret nc
-	; ld a, 5
-	; call AICheckIfHPBelowFraction
-	; ret nc
-	; jp AIUseHyperPotion
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
+
+WeebraAI:
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
+
+JoyAI:
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
+
+JennyAI:
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
+
+SmithAI:
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
+
+CraigAI:
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
+
+ProfOakAI:
+	cp $ff
+	ret nc
+	ld a,$3
+	call AICheckIfHPBelowFraction
+	ret nc
+	jp AIUseFullRestore
 
 GenericAI:
 	and a ; clear carry

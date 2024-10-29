@@ -98,12 +98,6 @@ DisplayListMenuIDLoop::
 .buttonAPressed
 	ld a, [wCurrentMenuItem]
 	call PlaceUnfilledArrowMenuCursor
-
-; pointless because both values are overwritten before they are read
-	ld a, $01
-	ld [wMenuExitMethod], a
-	ld [wChosenMenuItem], a
-
 	xor a
 	ld [wMenuWatchMovingOutOfBounds], a
 	ld a, [wCurrentMenuItem]

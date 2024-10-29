@@ -1,9 +1,9 @@
 ; function that displays the start menu
 DrawStartMenu::
 	CheckEvent EVENT_GOT_POKEDEX
-; menu with pokedex
+; menu with pokedex + portablePC
 	hlcoord 10, 0
-	lb bc, 14, 8
+	lb bc, 16, 8 ; edited for portablepc
 	jr nz, .drawTextBoxBorder
 ; shorter menu if the player doesn't have the pokedex
 	hlcoord 10, 0
@@ -31,7 +31,7 @@ DrawStartMenu::
 ; case for having pokedex
 	ld de, StartMenuPokedexText
 	call PrintStartMenuItem
-	ld a, $07
+	ld a, $08 ; edited for portablepc
 .storeMenuItemCount
 	ld [wMaxMenuItem], a ; number of menu items
 	ld de, StartMenuPokemonText
@@ -51,6 +51,11 @@ DrawStartMenu::
 	call PrintStartMenuItem
 	ld de, StartMenuOptionText
 	call PrintStartMenuItem
+	CheckEvent EVENT_GOT_POKEDEX ; new, for portablePC
+	jr z, .dontPrintPortablePC ; new, for portablePC
+	ld de, StartMenuPortablePCText ; new, for portablePC
+	call PrintStartMenuItem ; new, for portablePC
+.dontPrintPortablePC ; new, for portablePC
 	ld de, StartMenuExitText
 	call PlaceString
 	ld hl, wd730
@@ -77,6 +82,9 @@ StartMenuExitText:
 
 StartMenuOptionText:
 	db "OPTION@"
+
+StartMenuPortablePCText: ; new
+	db "PORT.PC@"
 
 PrintStartMenuItem:
 	push hl

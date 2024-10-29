@@ -80,3 +80,4 @@ INCLUDE "home/bankswitch2.asm"
 INCLUDE "home/predef.asm"
 INCLUDE "home/hidden_objects.asm"
 INCLUDE "home/predef_text.asm"
+
