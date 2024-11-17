@@ -311,7 +311,7 @@ YellowText:
 	db "YELLOW@"
 
 LegacyText:
-	db "LEGACY@"
+	db "LEGACY+@"
 
 HardText:
 	db "HARD@"
