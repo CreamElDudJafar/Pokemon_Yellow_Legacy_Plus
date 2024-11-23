@@ -2335,7 +2335,9 @@ wPlayerGender::
 wUniQuizAnswer::
 	ds 2
 	
-	ds 52 ; unused
+wSum:: dw
+
+	ds 50 ; unused
 
 wObtainedHiddenItemsFlags:: flag_array 112
 
